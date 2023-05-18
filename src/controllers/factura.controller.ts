@@ -1,3 +1,4 @@
+import {authenticate, TokenService} from '@loopback/authentication';
 import {
   Count,
   CountSchema,
@@ -20,6 +21,7 @@ import {
 import {Factura} from '../models';
 import {FacturaRepository} from '../repositories';
 
+@authenticate('jwt')
 export class FacturaController {
   constructor(
     @repository(FacturaRepository)
