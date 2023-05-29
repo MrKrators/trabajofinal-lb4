@@ -13,7 +13,7 @@ export class Item extends Entity {
     type: 'number',
     required: true,
   })
-  price: number;
+  precio: number;
 
   @property({
     type: 'number',
@@ -25,9 +25,9 @@ export class Item extends Entity {
     type: 'number',
     required: true,
   })
-  product_id: number;
+  producto_id: number;
 
-
+  [prop: string]: any;
   constructor(data?: Partial<Item>) {
     super(data);
   }

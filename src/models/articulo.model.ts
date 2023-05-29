@@ -27,7 +27,7 @@ export class Articulo extends Entity {
   })
   price: number;
 
-
+  [prop: string]: any;
   constructor(data?: Partial<Articulo>) {
     super(data);
   }

@@ -13,9 +13,9 @@ export class Categoria extends Entity {
     type: 'string',
     required: true,
   })
-  name: string;
+  nombre: string;
 
-
+  [prop: string]: any;
   constructor(data?: Partial<Categoria>) {
     super(data);
   }

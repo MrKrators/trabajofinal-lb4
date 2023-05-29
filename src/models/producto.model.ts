@@ -13,21 +13,21 @@ export class Producto extends Entity {
     type: 'string',
     required: true,
   })
-  name: string;
+  nombre: string;
 
   @property({
     type: 'string',
     required: true,
   })
-  details: string;
+  detalle: string;
 
   @property({
     type: 'number',
     required: true,
   })
-  category_id: number;
+  categoria_id: number;
 
-
+  [prop: string]: any;
   constructor(data?: Partial<Producto>) {
     super(data);
   }

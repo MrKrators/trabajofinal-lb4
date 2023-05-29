@@ -53,7 +53,7 @@ export class Factura extends Entity {
   })
   total: number;
 
-
+  [prop: string]: any;
   constructor(data?: Partial<Factura>) {
     super(data);
   }
