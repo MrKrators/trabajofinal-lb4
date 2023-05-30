@@ -1,4 +1,4 @@
-import {authenticate, TokenService} from '@loopback/authentication';
+
 import {
   Count,
   CountSchema,
@@ -8,25 +8,25 @@ import {
   Where,
 } from '@loopback/repository';
 import {
-  post,
-  param,
+  del,
   get,
   getModelSchemaRef,
+  param,
   patch,
+  post,
   put,
-  del,
   requestBody,
   response,
 } from '@loopback/rest';
 import {Factura} from '../models';
 import {FacturaRepository} from '../repositories';
 
-@authenticate('jwt')
+
 export class FacturaController {
   constructor(
     @repository(FacturaRepository)
-    public facturaRepository : FacturaRepository,
-  ) {}
+    public facturaRepository: FacturaRepository,
+  ) { }
 
   @post('/facturas')
   @response(200, {
